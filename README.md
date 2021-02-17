@@ -18,6 +18,11 @@ Create workspace:
 ```
 ng new [PROJECT NAME]
 ```
+Clone the application:
+
+```
+git clone [PROJECT URL]
+```
 
 Run the application:
 
