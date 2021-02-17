@@ -1,0 +1,27 @@
+p {
+    text-align: center;
+}
+.flights {
+
+    &.container{
+        height: 100%;
+    }
+    table {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+tr {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.highlight{
+    animation: ripple 1s;
+    background-color: #d3d3d3;
+  }
+  @keyframes ripple {
+    from {background-color: white;}
+    to {background-color: #d3d3d3;}
+  }

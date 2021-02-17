@@ -1,0 +1,31 @@
+<div class="flight-details container">
+  <div class="flight-details title">
+    <p>Flight Details</p>
+  </div>
+  <mat-selection-list class="flight-details selection"#flightDetails [multiple]="false" *ngIf="currentFlightDetails.plane !== ''">
+    <mat-list-option>
+<div class="item-text">
+    <p>Plane Number</p>
+    <p>{{ currentFlightDetails.plane }}</p>
+</div>
+    </mat-list-option>
+    <mat-list-option>
+<div class="item-text">
+    <p>Duration</p>
+    <p>{{ currentFlightDetails.duration | m2h }}</p>
+</div>
+    </mat-list-option>
+    <mat-list-option>
+<div class="item-text">
+    <p>From Gate</p>
+    <p>{{ currentFlightDetails.from_gate }}</p>
+</div>
+    </mat-list-option>
+    <mat-list-option>
+      <div class="item-text">
+          <p>To Gate</p>
+          <p>{{ currentFlightDetails.to_gate }}</p>
+      </div>
+    </mat-list-option>
+  </mat-selection-list>
+</div>

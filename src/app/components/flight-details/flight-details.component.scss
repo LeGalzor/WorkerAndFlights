@@ -1,0 +1,29 @@
+p {
+  text-align: center;
+}
+.flight-details {
+  &.title {
+    border-bottom: 1px groove rgba(0, 0, 0, 0.12);
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+      font-size: 18px;
+      color: rgba(0, 0, 0, 0.6);
+    }
+  }
+  &.selection{
+      height: 100%;
+  }
+}
+::ng-deep .item-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+ .mat-selection-list {
+    height: 100%;
+    overflow: auto;
+  }

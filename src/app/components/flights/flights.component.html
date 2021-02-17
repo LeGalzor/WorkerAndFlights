@@ -1,0 +1,35 @@
+<div class="flights container" *ngIf="flights.length">
+  <table mat-table [dataSource]="flights" class="mat-elevation-z8">
+    
+    <!-- Flight Column -->
+    <ng-container matColumnDef="flightNum">
+      <th mat-header-cell *matHeaderCellDef>Flight Number</th>
+      <td mat-cell *matCellDef="let element">{{ element.num }}</td>
+    </ng-container>
+
+    <!-- Origin Column -->
+    <ng-container matColumnDef="origin">
+      <th mat-header-cell *matHeaderCellDef>Origin</th>
+      <td mat-cell *matCellDef="let element">{{ element.from }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="originDate">
+      <th mat-header-cell *matHeaderCellDef>Origin Date</th>
+      <td mat-cell *matCellDef="let element">{{ element.from_date }}</td>
+    </ng-container>
+
+    <!-- Destination Column -->
+    <ng-container matColumnDef="destination">
+      <th mat-header-cell *matHeaderCellDef>Destination</th>
+      <td mat-cell *matCellDef="let element">{{ element.to }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="destinationDate">
+      <th mat-header-cell *matHeaderCellDef>Destination Date</th>
+      <td mat-cell *matCellDef="let element">{{ element.to_date }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns" [ngClass]="{'highlight': selectedRowId === row.num.toString() }" (click)="selectFlightRow(row)"></tr>
+  </table>
+</div>

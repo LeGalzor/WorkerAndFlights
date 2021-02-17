@@ -1,0 +1,21 @@
+p {
+    text-align: center;
+}
+.workers{
+    &.title{
+        border-bottom: 1px groove  rgba(0,0,0,.12);
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p {
+            font-size: 18px;
+            color: rgba(0,0,0,.60);
+        }
+    }
+}
+:host {
+    ::ng-deep.mat-pseudo-checkbox{
+      display: none !important;
+    }
+}

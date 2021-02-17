@@ -1,0 +1,11 @@
+<div class="workers container">
+  <div class="workers title">
+    <p>Workers</p>
+  </div>
+  <mat-selection-list #workers [multiple]="false">
+      <mat-list-option *ngFor="let worker of questWorkers; let i = index"
+      (click)="handleListClick(worker.id)" [selected]="worker.id === currentWorkerId">
+        {{ worker.name }}
+      </mat-list-option>
+    </mat-selection-list>
+</div>
