@@ -21,7 +21,7 @@ ng new [PROJECT NAME]
 Clone the application:
 
 ```
-git clone [PROJECT URL]
+git clone https://github.com/LeGalzor/WorkerAndFlights.git
 ```
 
 Run the application:
